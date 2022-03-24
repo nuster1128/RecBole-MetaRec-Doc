@@ -1,22 +1,68 @@
-Welcome to Lumache's documentation!
-===================================
+.. RecBole-MetaModule documentation master file.
+.. title:: RecBole-MetaModule v1.0
+.. image:: logo.png
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+==============================================
 
-.. note::
+Introduction
+-------------------------
+RecBole-MetaModule is an extended module for RecBole, which aims to help researches to compare and develop their own models in meta learning recommendation field.
 
-   This project is under active development.
+This module is totally developed based on RecBole by adding extened classes and functions, without modifying any codes of RecBole core.
 
-Contents
---------
+The contributions are briefly listed as follows:
+
+- We extend :attr:`MetaDataset` from :attr:`Dataset` to split dataset by 'task'.
+- We extend :attr:`MetaDataLoader` from :attr:`AbstractDataLoader` to transform dataset into task form.
+- We extend :attr:`MetaRecommender` from :attr:`AbstractRecommender` to provide a base recommender for implementing meta learning model.
+- We extend :attr:`MetaTrainer` from  :attr:`Trainer` to provide a base trainer for implementing meta learning training process.
+- We implement :attr:`MetaUtils` with some useful toolkits for meta learning.
+
+Therefore, researches can:
+
+- Conveniently develop their own meta learning recommendation models.
+- Conveniently learn and compare meta learning recommendation models that we have implemented.
+- Enjoy advantages and features of RecBole.
+
+**Note:** Before starting, it is strongly recommended to realize how RecBole works, and the homepage of RecBole is [https://recbole.io].
+
+The construction is as following.
+
+.. image:: graph.png
+
+
 
 .. toctree::
+   :maxdepth: 1
+   :caption: Get Started
 
-   usage
-   api
+   get_started/install
+   get_started/quick_start
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Models
+
+   models/melu
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Develop Guide
+
+   develop_guide/overview
+   develop_guide/configuration
+   develop_guide/model
+   develop_guide/trainer
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Module Reference
+
+   module_reference/recbole.MetaModule.MetaDataset
+   module_reference/recbole.MetaModule.MetaDataLoader.rst
+   module_reference/recbole.MetaModule.MetaRecommender.rst
+   module_reference/recbole.MetaModule.MetaTrainer.rst
+   module_reference/recbole.MetaModule.MetaUtils.rst
+
+
