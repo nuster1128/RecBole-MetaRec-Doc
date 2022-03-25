@@ -7,9 +7,9 @@
 
 Introduction
 -------------------------
-RecBole-MetaModule is an extended module for RecBole, which aims to help researches to compare and develop their own models in meta learning recommendation field.
+RecBole-MetaModule is an extended module for RecBole, which aims to help researches to compare and develop their own models in the meta learning recommendation field.
 
-This module is totally developed based on RecBole by adding extened classes and functions, without modifying any codes of RecBole core.
+This module is developed totally based on RecBole by adding extended classes and functions, without modifying any codes of RecBole core.
 
 The contributions are briefly listed as follows:
 
