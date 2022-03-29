@@ -1,4 +1,4 @@
-recbole.MetaModule.MetaRecommender
+MetaRecommender
 ==============================================
 
 MetaRecommender is the key component for implementing meta learning model.

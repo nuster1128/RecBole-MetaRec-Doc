@@ -17,12 +17,12 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'RecBole-MetaModule'
+project = 'RecBole-MetaRec'
 copyright = '2022, Zeyu Zhang'
 author = 'Zeyu Zhang'
 
 # The full version, including alpha/beta/rc tags
-release = 'v1.0'
+release = 'v1.0.1'
 
 
 # -- General configuration ---------------------------------------------------

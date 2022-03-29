@@ -15,8 +15,8 @@ First, import the packages that you need.
     from collections import OrderedDict
     from recbole.model.layers import MLPLayers
     from recbole.utils import InputType, FeatureSource, FeatureType
-    from recbole.MetaModule.MetaRecommender import MetaRecommender
-    from recbole.MetaModule.MetaUtils import GradCollector,EmbeddingTable
+    from MetaRecommender import MetaRecommender
+    from MetaUtils import GradCollector,EmbeddingTable
 
 Create your model class
 -------------------------
@@ -131,8 +131,8 @@ Fourth, implement ``self.predict(spt_x,spt_y,qrt_x)`` method.
     from collections import OrderedDict
     from recbole.model.layers import MLPLayers
     from recbole.utils import InputType, FeatureSource, FeatureType
-    from MetaModule.MetaRecommender import MetaRecommender
-    from MetaModule.MetaUtils import GradCollector,EmbeddingTable
+    from MetaRecommender import MetaRecommender
+    from MetaUtils import GradCollector,EmbeddingTable
 
     class MeLU(MetaRecommender):
         input_type = InputType.POINTWISE

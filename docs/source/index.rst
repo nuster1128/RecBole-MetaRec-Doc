@@ -1,5 +1,5 @@
-.. RecBole-MetaModule documentation master file.
-.. title:: RecBole-MetaModule v1.0
+.. RecBole-MetaRec documentation master file.
+.. title:: RecBole-MetaRec v1.0.1
 .. image:: logo.png
 
 
@@ -7,9 +7,9 @@
 
 Introduction
 -------------------------
-RecBole-MetaModule is an extended module for RecBole, which aims to help researches to compare and develop their own models in the meta learning recommendation field.
+RecBole-MetaRec is an extended module for RecBole, which aims to help researches to compare and develop their own models in meta learning recommendation field.
 
-This module is developed totally based on RecBole by adding extended classes and functions, without modifying any codes of RecBole core.
+This module is totally developed based on RecBole by adding extened classes and functions, without modifying any codes of RecBole core.
 
 The contributions are briefly listed as follows:
 
@@ -39,6 +39,7 @@ The construction is as following.
 
    get_started/install
    get_started/quick_start
+   get_started/versions
 
 .. toctree::
    :maxdepth: 1
@@ -59,10 +60,9 @@ The construction is as following.
    :maxdepth: 1
    :caption: Module Reference
 
-   module_reference/recbole.MetaModule.MetaDataset
-   module_reference/recbole.MetaModule.MetaDataLoader.rst
-   module_reference/recbole.MetaModule.MetaRecommender.rst
-   module_reference/recbole.MetaModule.MetaTrainer.rst
-   module_reference/recbole.MetaModule.MetaUtils.rst
-
-
+   module_reference/MetaDataset
+   module_reference/MetaDataLoader.rst
+   module_reference/MetaRecommender.rst
+   module_reference/MetaTrainer.rst
+   module_reference/MetaCollector.rst
+   module_reference/MetaUtils.rst

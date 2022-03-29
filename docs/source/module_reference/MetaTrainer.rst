@@ -1,4 +1,4 @@
-recbole.MetaModule.MetaTrainer
+MetaTrainer
 ==============================================
 
 MetaTrainer is the key component for training a meta learning method.

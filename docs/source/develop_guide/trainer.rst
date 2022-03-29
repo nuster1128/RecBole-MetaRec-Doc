@@ -15,7 +15,7 @@ First, import the packages that you need.
     from recbole.utils import FeatureSource, set_color
     from recbole.data.interaction import Interaction
     from recbole.utils import get_gpu_usage
-    from recbole.MetaModule.MetaTrainer import MetaTrainer
+    from MetaTrainer import MetaTrainer
 
 Create your trainer class
 -------------------------
@@ -98,7 +98,7 @@ Fourth, implement ``self._train_epoch(train_data, epoch_idx, loss_func=None, sho
     from recbole.utils import FeatureSource, set_color
     from recbole.data.interaction import Interaction
     from recbole.utils import get_gpu_usage
-    from MetaModule.MetaTrainer import MetaTrainer
+    from MetaTrainer import MetaTrainer
 
     class MeLUTrainer(MetaTrainer):
         def __init__(self,config,model):

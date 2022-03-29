@@ -1,4 +1,4 @@
-recbole.MetaModule.MetaDataset
+MetaDataset
 ==============================================
 
 MetaDataset is the key component for splitting dataset by ``task``.

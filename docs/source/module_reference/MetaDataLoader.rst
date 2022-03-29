@@ -1,4 +1,4 @@
-recbole.MetaModule.MetaDataLoader
+MetaDataLoader
 ==============================================
 
 MetaDataLoader is the key component for transforming dataset into task form.
@@ -12,7 +12,7 @@ The extended modification can be listed briefly as following:
 
 - **[Add]** ``self.generateSingleTaskForTrain(uid,v)``: Format a single task.
 
-- **[Add]** ``self.getUserList()``: Generate user list of this dataset.
+- **[Add]** ``self.getTaskIdList()``: Generate the list of task ids in this dataset.
 
 - **[Override]** ``self._init_batch_size_and_step()``: Initialize ``train_batch_size``.
 
@@ -41,10 +41,10 @@ We use this function to generate a task.
 :v: value from function ``transformToTaskFormat()``.
 :[return]: An object of class Task.
 
-self.getUserList()
+self.getTaskIdList()
 -------------------------
 
-This function can generate user list of this dataset.
+This function can generate the list of task ids in this dataset.
 
 :[return] userlist (1D numpy.ndarray): an 1D array of user list.
 

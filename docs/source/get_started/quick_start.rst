@@ -5,15 +5,15 @@ Actually, the quick start is totally as same as that in `RecBole Quick Start <ht
 
 We will show you how to train and test ``MeLU`` model on the ``ml-100k-local`` dataset.
 
-First, you can find the demo file ``run.py`` in ``recbole.MetaModule`` dictionary.
+First, you can find the demo file ``run.py`` in the repository.
 
 .. code:: python
 
     from recbole.utils import init_logger, init_seed
     from recbole.config import Config
-    from recbole.MetaModule.MetaUtils import *
-    from recbole.MetaModule.model.MeLU.MeLUTrainer import MeLUTrainer
-    from recbole.MetaModule.model.MeLU.MeLU import MeLU
+    from MetaUtils import *
+    from model.MeLU.MeLUTrainer import MeLUTrainer
+    from model.MeLU.MeLU import MeLU
 
     if __name__ == '__main__':
         config = Config(model=MeLU, dataset='ml-100k-local',config_file_list=['model/MeLU/MeLU.yaml'])
