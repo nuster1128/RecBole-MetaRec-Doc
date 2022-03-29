@@ -17,6 +17,7 @@ The contributions are briefly listed as follows:
 - We extend :attr:`MetaDataLoader` from :attr:`AbstractDataLoader` to transform dataset into task form.
 - We extend :attr:`MetaRecommender` from :attr:`AbstractRecommender` to provide a base recommender for implementing meta learning model.
 - We extend :attr:`MetaTrainer` from  :attr:`Trainer` to provide a base trainer for implementing meta learning training process.
+- We extend :attr:`MetaCollector` from :attr:`Collector` to collect data for evaluation in meta learning circumstance.
 - We implement :attr:`MetaUtils` with some useful toolkits for meta learning.
 
 Therefore, researches can:
