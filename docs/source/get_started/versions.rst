@@ -14,3 +14,12 @@ Version 1.0.1
 - Rename ``MetaDataLoader.getUserList()`` as ``MetaDataLoader.getTaskIdList()``.
 - Optimize the package structure.
 - Update the document after adjustment above.
+
+Version 1.0.2
+-------------------------
+
+- Implement models: ``MAML``, ``FOMAML``, ``MAMO``, ``TaNP``, ``LWA``, ``NLBA``, ``MetaEmb``, ``MWUF``.
+- Optimize some ``MetaDataLoader`` and some utils for GPU support.
+- Support token_seq embedding with ``EmbeddingTable``.
+- Update dataset formats.
+- Update the document after adjustment above.

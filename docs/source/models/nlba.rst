@@ -1,11 +1,25 @@
-Quick Start
+NLBA
 ==============================================
 
-Actually, the quick start is totally as same as that in `RecBole Quick Start <https://recbole.io/docs/get_started/quick_start.html#>`_. But we still provide you a runnable demo for this module usage.
+Introduction
+-------------------------
 
-We will show you how to train and test ``FOMeLU`` model on the ``ml-100k`` dataset.
+`[paper] <https://proceedings.neurips.cc/paper/2017/hash/51e6d6e679953c6311757004d8cbbba9-Abstract.html>`_
 
-First, you can find the demo file ``run.py`` in the repository.
+**Title:** A Meta-Learning Perspective on Cold-Start Recommendations for Items
+
+**Authors:** Manasi Vartak, Arvind Thiagarajan, Conrado Miranda, Jeshua Bratman, Hugo Larochelle
+
+**Abstract:**  Matrix factorization (MF) is one of the most popular techniques for product recommendation, but is known to suffer from serious cold-start problems. Item cold-start problems are particularly acute in settings such as Tweet recommendation where new items arrive continuously. In this paper, we present a meta-learning strategy to address item cold-start when new items arrive continuously. We propose two deep neural network architectures that implement our meta-learning strategy. The first architecture learns a linear classifier whose weights are determined by the item history while the second architecture learns a neural network whose biases are instead adjusted. We evaluate our techniques on the real-world problem of Tweet recommendation. On production data at Twitter, we demonstrate that our proposed techniques significantly beat the MF baseline and also outperform production models for Tweet recommendation.
+
+.. image:: ../modelPic/NLBA.png
+    :width: 700
+    :align: center
+
+Quick Start Example
+-------------------------
+
+**A Running Example:**
 
 .. code:: python
 
@@ -13,7 +27,7 @@ First, you can find the demo file ``run.py`` in the repository.
     from recbole.config import Config
     from MetaUtils import *
 
-    modelName='FOMeLU'
+    modelName='NLBA'
     datasetName='ml-100k'
     trainerName=modelName+'Trainer'
     configPath=['model/'+modelName+'/'+modelName+'.yaml']
@@ -53,22 +67,3 @@ First, you can find the demo file ``run.py`` in the repository.
 
         logger.info('best valid result: {}'.format(best_valid_result))
         logger.info('test result: {}'.format(test_result))
-
-
-Then run the file ``run.py`` directly after RecBole installation.
-And the output will be as following.
-
-.. code:: python
-
-    24 Mar 15:54    INFO
-    General Hyper Parameters:
-    gpu_id = 0
-    use_gpu = True
-    seed = 2020
-    ......
-    24 Mar 15:54    INFO  Loading model structure and parameters from saved\MeLU-Mar-24-2022_15-54-35.pth
-    24 Mar 15:54    INFO  best valid result: OrderedDict([('ndcg@5', 0.5257)])
-    24 Mar 15:54    INFO  test result: OrderedDict([('ndcg@5', 0.5585)])
-
-
-

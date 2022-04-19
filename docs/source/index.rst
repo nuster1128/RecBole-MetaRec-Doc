@@ -47,6 +47,12 @@ The construction is as following.
    :caption: Models
 
    models/melu
+   models/mamo
+   models/tanp
+   models/lwa
+   models/nlba
+   models/metaemb
+   models/mwuf
 
 .. toctree::
    :maxdepth: 1

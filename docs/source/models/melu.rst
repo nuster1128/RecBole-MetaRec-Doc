@@ -27,26 +27,26 @@ Quick Start Example
 
 - ``embedding_size(int)`` : The embedding size of feature fields.
 
-- ``embedding_size(int)`` : The embedding size of feature fields.
-
 - ``mlp_hidden_size(list of int)`` : The hidden size of MLP layers.
 
 - ``melu_args.local_lr(float)`` : The learning rate of task-specific process.
 
 - ``melu_args.lr(float)`` : The learning rate of global update process.
 
-**A Running Example:**
+We have implemented MeLU with both FOMAML and Full MAML.
+
+**A Running Example for FOMAML:**
 
 .. code:: python
 
     from recbole.utils import init_logger, init_seed
     from recbole.config import Config
     from MetaUtils import *
-    from model.MeLU.MeLUTrainer import MeLUTrainer
-    from model.MeLU.MeLU import MeLU
+    from model.FOMeLU.MeLUTrainer import FOMeLUTrainer
+    from model.FOMeLU.MeLU import FOMeLU
 
     if __name__ == '__main__':
-        config = Config(model=MeLU, dataset='ml-100k-local',config_file_list=['model/MeLU/MeLU.yaml'])
+        config = Config(model=FOMeLU, dataset='ml-100k',config_file_list=['model/FOMeLU/FOMeLU.yaml'])
         init_seed(config['seed'], config['reproducibility'])
 
         # logger initialization
@@ -62,11 +62,11 @@ Quick Start Example
         train_data, valid_data, test_data = meta_data_preparation(config, dataset)
 
         # model loading and initialization
-        model = MeLU(config, train_data.dataset).to(config['device'])
+        model = FOMeLU(config, train_data.dataset).to(config['device'])
         logger.info(model)
 
         # trainer loading and initialization
-        trainer = MeLUTrainer(config, model)
+        trainer = FOMeLUTrainer(config, model)
 
         # model training
         best_valid_score, best_valid_result = trainer.fit(train_data, valid_data)
