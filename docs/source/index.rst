@@ -1,5 +1,5 @@
 .. RecBole-MetaRec documentation master file.
-.. title:: RecBole-MetaRec v1.0.1
+.. title:: RecBole-MetaRec v1.0.2
 .. image:: logo.png
 
 
