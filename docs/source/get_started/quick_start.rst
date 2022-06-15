@@ -4,6 +4,7 @@ Quick Start
 After the package installation process, you can run the quickstart code with:
 
 .. code:: python
+
     python quickstart.py
 
 And the output will be as following.
