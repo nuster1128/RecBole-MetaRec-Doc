@@ -23,3 +23,8 @@ Version 1.0.2
 - Support token_seq embedding with ``EmbeddingTable``.
 - Update dataset formats.
 - Update the document after adjustment above.
+
+Version 1.0.3
+-------------------------
+
+- Update quickstart.

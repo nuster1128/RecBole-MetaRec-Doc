@@ -1,74 +1,27 @@
 Quick Start
 ==============================================
 
-Actually, the quick start is totally as same as that in `RecBole Quick Start <https://recbole.io/docs/get_started/quick_start.html#>`_. But we still provide you a runnable demo for this module usage.
-
-We will show you how to train and test ``FOMeLU`` model on the ``ml-100k`` dataset.
-
-First, you can find the demo file ``run.py`` in the repository.
+After the package installation process, you can run the quickstart code with:
 
 .. code:: python
+    python quickstart.py
 
-    from recbole.utils import init_logger, init_seed
-    from recbole.config import Config
-    from MetaUtils import *
-
-    modelName='FOMeLU'
-    datasetName='ml-100k'
-    trainerName=modelName+'Trainer'
-    configPath=['model/'+modelName+'/'+modelName+'.yaml']
-    trainerClass = importlib.import_module('model.' + modelName + '.' + modelName + 'Trainer').__getattribute__(
-            modelName + 'Trainer')
-    modelClass = importlib.import_module('model.' + modelName + '.' + modelName).__getattribute__(modelName)
-
-    if __name__ == '__main__':
-        config = Config(model=modelClass, dataset=datasetName, config_file_list=configPath)
-        init_seed(config['seed'], config['reproducibility'])
-
-        # logger initialization
-        init_logger(config)
-        logger = getLogger()
-        logger.info(config)
-
-        # dataset filtering
-        dataset = create_meta_dataset(config)
-        logger.info(dataset)
-
-        # dataset splitting
-        train_data, valid_data, test_data = meta_data_preparation(config, dataset)
-        logger.info(train_data)
-
-        # model loading and initialization
-        model = modelClass(config, train_data.dataset).to(config['device'])
-        logger.info(model)
-
-        # trainer loading and initialization
-        trainer = trainerClass(config, model)
-
-        # model training
-        best_valid_score, best_valid_result = trainer.fit(train_data, valid_data)
-
-        # model evaluation
-        test_result = trainer.evaluate(test_data)
-
-        logger.info('best valid result: {}'.format(best_valid_result))
-        logger.info('test result: {}'.format(test_result))
-
-
-Then run the file ``run.py`` directly after RecBole installation.
 And the output will be as following.
 
 .. code:: python
 
-    24 Mar 15:54    INFO
+    15 Jun 21:13    INFO
     General Hyper Parameters:
     gpu_id = 0
     use_gpu = True
     seed = 2020
+    state = INFO
+    reproducibility = True
     ......
-    24 Mar 15:54    INFO  Loading model structure and parameters from saved\MeLU-Mar-24-2022_15-54-35.pth
-    24 Mar 15:54    INFO  best valid result: OrderedDict([('ndcg@5', 0.5257)])
-    24 Mar 15:54    INFO  test result: OrderedDict([('ndcg@5', 0.5585)])
+    15 Jun 21:13    INFO  Loading model structure and parameters from saved\TaNP-Jun-15-2022_21-13-04.pth
+    15 Jun 21:13    INFO  best valid result: OrderedDict([('precision@5', 0.5323), ('recall@5', 0.5323), ('hit@5', 1.0), ('ndcg@5', 0.5191), ('mrr@5', 0.6981)])
+    15 Jun 21:13    INFO  test result: OrderedDict([('precision@5', 0.5097), ('recall@5', 0.5097), ('hit@5', 1.0), ('ndcg@5', 0.5029), ('mrr@5', 0.6855)])
+
 
 
 
